@@ -1,8 +1,18 @@
 <html>
     <head>
         <script charset="utf-8" src="js/bundle.js"></script>
-        <script>
+        <script src="js/libs/jquery-2.1.4.min.js"></script>
 
+        <script>
+            $(document).ready(function(){
+                Game.init();
+                Game.update();
+
+                $("#display").click(function(){
+                    Game.update();
+
+                });
+            });
         </script>
         <style>
             table {
@@ -20,7 +30,24 @@
             }
 
             #log {
-                white-space: pre;
+                float:left;
+            }
+
+            .log{
+                width: 300px;
+            }
+
+            .log h2 {
+                font-size: 16px;
+            }
+
+            .log li {
+                font-size: 12px;
+            }
+
+            #display {
+                float: left;
+                margin-right: 10px;
             }
         </style>
     </head>

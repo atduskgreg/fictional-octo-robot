@@ -1,6 +1,5 @@
 const ApeECS = require('ape-ecs');
 
-
 class LogDisplay extends ApeECS.System {
     init(){
         this.logQuery = this.createQuery().fromAll("Log").persist();

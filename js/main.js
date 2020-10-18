@@ -19,6 +19,8 @@ const MapGenerator = require('./systems/map_generator');
 const LogDisplay = require('./systems/log_display');
 const DebugDisplay = require('./systems/debug_display');
 
+const OnMoveEventHandler = require('./systems/on_move_event_handler');
+
 Strings = {
     roomNames : ["Parlor", "Dining Room", "Library", "Kitchen", "Master Bedroom", "Pantry", "Lounge", "Family Room", "Bathroom"],
     firstNames : ["John", "Emily", "Cat", "Reginald"],
@@ -27,6 +29,7 @@ Strings = {
 }
 
 const world = new ApeECS.World();
+
 world.registerComponent(Position);
 world.registerComponent(Destination);
 world.registerComponent(Dimension);
@@ -42,6 +45,9 @@ world.registerSystem("debugDisplay", DebugDisplay);
 world.registerSystem("mapGenerator", MapGenerator);
 world.registerSystem("spawner", Spawner);
 world.registerSystem("logDisplay", LogDisplay);
+world.registerSystem("onMoveEventHandler", OnMoveEventHandler);
+
+
 
 const GameMap = world.createEntity({
     id : 'GameMap',
@@ -85,9 +91,16 @@ Game = {
     
     update : function()
     {
+        // actions
         world.runSystems("pathfinder");
+
+        // events
+        world.runSystems("onMoveEventHandler");
+
+        // display
         world.runSystems("debugDisplay");
         world.runSystems("logDisplay");
+
     },
     world : world
 }

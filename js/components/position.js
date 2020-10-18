@@ -6,9 +6,17 @@ class Position extends ApeECS.Component {
         super();
         this.x = 0;
         this.y = 0;
+        this.changeEvents = true;
     }
     init(values)
     {
+        this.x = values.x;
+        this.y = values.y;
+    }
+
+    update(values)
+    {
+        console.log("Position#update");
         this.x = values.x;
         this.y = values.y;
     }
