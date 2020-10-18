@@ -1,7 +1,6 @@
 ## TODO
 
-* jQuery so I don't have to use the console to tick turns
+* Convert over to event system for other people detection, etc.
 * Get tracery installed and setup
 * Generate room descriptions
-* Add seeing other characters to the log
 * Divide rooms up into regions (or place furniture) and use proximity to this in log
