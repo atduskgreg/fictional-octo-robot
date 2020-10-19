@@ -4,22 +4,18 @@ class Position extends ApeECS.Component {
     
     constructor(){
         super();
+
+        this.changeEvents = true;
         this.x = 0;
         this.y = 0;
-        this.changeEvents = true;
     }
     init(values)
     {
         this.x = values.x;
         this.y = values.y;
+        this.constructor.changeEvents = true; // this is necessary
     }
 
-    update(values)
-    {
-        console.log("Position#update");
-        this.x = values.x;
-        this.y = values.y;
-    }
 }
 
 module.exports = Position;

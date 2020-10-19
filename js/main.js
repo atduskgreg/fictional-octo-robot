@@ -21,6 +21,8 @@ const DebugDisplay = require('./systems/debug_display');
 
 const OnMoveEventHandler = require('./systems/on_move_event_handler');
 
+const grammar = require('./generator');
+
 Strings = {
     roomNames : ["Parlor", "Dining Room", "Library", "Kitchen", "Master Bedroom", "Pantry", "Lounge", "Family Room", "Bathroom"],
     firstNames : ["John", "Emily", "Cat", "Reginald"],
@@ -102,7 +104,8 @@ Game = {
         world.runSystems("logDisplay");
 
     },
-    world : world
+    world : world,
+    grammar : grammar
 }
 
 module.exports.Game = Game;

@@ -1,0 +1,50 @@
+{
+    "origin":"#[#setRoom#]roomDescription#",
+    "roomDescription":[
+       "#roomDescription#",
+       "It was the #roomName.capitalize#. #roomTone# There was a #roomFurniture#.",
+       "#roomTone# #furnitureReveal# It was the #roomName.capitalize#."
+    ],
+    "kitchenFurniture":[
+       "counter",
+       "refrigerator",
+       "cafe table",
+       "cabinet",
+       "icebox"
+    ],
+    "setRoomKitchen":[
+       "[roomName:kitchen][roomFurniture:#kitchenFurniture#]"
+    ],
+    "libraryFurniture":[
+       "bookshelf",
+       "divan",
+       "reading chair",
+       "fireplace",
+       "drinking cart"
+    ],
+    "roomTone":[
+       "It was a #roomMood# room.",
+       "The room was #roomMood#."
+    ],
+    "roomMood":[
+       "gloomy",
+       "sun-drenched",
+       "well-lit",
+       "bright",
+       "sunny",
+       "shadowy",
+       "claustrophobic"
+    ],
+    "furnitureReveal":[
+       "A #roomFurniture# was just visible.",
+       "A #roomFurniture# dominated the room.",
+       "A #roomFurniture# peaked out from a shadow."
+    ],
+    "setRoomLibrary":[
+       "[roomName:library][roomFurniture:#libraryFurniture#]"
+    ],
+    "setRoom":[
+       "#setRoomKitchen#",
+       "#setRoomLibrary#"
+    ]
+ }

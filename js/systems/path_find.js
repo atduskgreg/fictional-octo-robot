@@ -1,4 +1,3 @@
-
 const ApeECS = require('ape-ecs');
 const ROT = require('rot-js');
 
@@ -26,14 +25,13 @@ class PathFind extends ApeECS.System {
                 pathSteps.push({x : x, y: y})
             });
 
-            // var prevPos = {
-            //     x : position.x,
-            //     y : position.y
-            // };
-
             if(pathSteps.length > 1)
             {
-                position.update({x : pathSteps[1].x, y : pathSteps[1].y});
+
+                position.x = pathSteps[1].x;
+                position.y = pathSteps[1].y;
+
+                position.update({x : position.x, y : position.y});
             }
             
             var rooms = map.rooms;

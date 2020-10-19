@@ -1,0 +1,1 @@
+grep -C 1 -h $1 *.txt | less
