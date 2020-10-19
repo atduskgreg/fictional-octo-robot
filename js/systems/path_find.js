@@ -27,11 +27,7 @@ class PathFind extends ApeECS.System {
 
             if(pathSteps.length > 1)
             {
-
-                position.x = pathSteps[1].x;
-                position.y = pathSteps[1].y;
-
-                position.update({x : position.x, y : position.y});
+                position.move({x : pathSteps[1].x, y : pathSteps[1].y});
             }
             
             var rooms = map.rooms;
@@ -50,7 +46,7 @@ class PathFind extends ApeECS.System {
                 }  
             }
 
-            pathfinder.getOne("Log").logEvent({action : "move", location : currentLocation});
+        //    pathfinder.getOne("Log").logEvent({action : "move", location : currentLocation});
         }
 
     }
