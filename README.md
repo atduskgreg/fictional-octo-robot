@@ -26,7 +26,12 @@
         * A wants object X. B kills A to keep it
             * A and B both want object X. They fight and A is killed
     * markup language:
-        * rel(A,B, "siblings", symmetric=true), rel(B,C, "siblings", symmetric=true), rel(A,C, "siblings", symmetric=true)
+        * inheritance example:
+            * rel(A,B, "siblings", symmetric=true)
+            * rel(B,C, "siblings", symmetric=true)
+            * rel(A,C, "siblings", symmetric=true)
+            * murder(A, B|C, motive="inheritance")
+            * 
 
 * Narrative structure
     * Each character describes their relationships with the others as they move through the rooms

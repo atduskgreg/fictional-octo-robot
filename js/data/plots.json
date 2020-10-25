@@ -1,0 +1,22 @@
+{
+    "characters" : 
+    {
+        "id1" : {
+            "name" : "Bob",
+            "goal" : {
+                "kill" : "id2",
+                "motive" : "breakup" 
+            }
+        },
+        "id2" : {
+            "name" : "Jane"
+        }
+    },
+
+    "relationships" :
+    [
+        {"from" : "id1", "to" : "id2", "type" : "love"},
+        {"from" : "id2", "to" : "id1", "type" : "love"}
+
+    ]
+}

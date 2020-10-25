@@ -49,6 +49,16 @@ Utils = function(){ return {
     removeRand : function(arr) {
         var idx = Math.floor(Math.random() * arr.length);
         return arr.splice(idx, 1)[0];
+    },
+
+    getRand : function(arr) {
+        var idx = Math.floor(Math.random() * arr.length);
+        return arr[idx];
+    },
+
+    getRandNot : function(arr, target){
+        var filtered = arr.filter(function(a){ return a != target });
+        return Utils.getRand(filtered);
     }
 }}();
 

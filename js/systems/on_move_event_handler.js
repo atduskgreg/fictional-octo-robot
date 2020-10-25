@@ -25,6 +25,10 @@ class OnMoveEventHandler extends ApeECS.System {
                 if(prevRoom){ prevRoomName = prevRoom.name }
 
                 log.logEvent(new LogEntryChangeRoom(entity, prevRoomName, currentRoomName));
+
+                // check who else is in the same room
+                // use a new log type to log who they noticed
+                // maybe check if they got really close and log that
             }
             else
             {
